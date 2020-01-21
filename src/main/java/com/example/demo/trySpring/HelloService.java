@@ -2,11 +2,13 @@ package com.example.demo.trySpring;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class HelloService {
 	
+	@Autowired
 	private HelloRepository helloRepository;
 	
 	public Employee findOne(int id) {

@@ -1,1 +1,1 @@
-INSERT INTO employee (employee_id, employee_name, age) VALUES (1, 'John Wick', 36)
+INSERT INTO employee VALUES(1, 'John Wick', 55);
