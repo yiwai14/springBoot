@@ -10,12 +10,12 @@
 <body>
 	<div class="col-sm-5">
 		<div class="page-header">
-			<h1>User Registration</h1>
+			<h1>ユーザー登録画面</h1>
 		</div>
 		<form method="post" th:action="@{/signup}" th:object="${signupForm}">
 			<table class="table table-bordered table-hover">
 				<tr>
-					<th class="active col-sm-3">User ID</th>
+					<th class="active col-sm-3">ユーザーID</th>
 					<td>
 						<div class="form-group">
 							<input type="text" class="form-control" th:field="*{userId}"/>
@@ -24,7 +24,7 @@
 				</tr>
 				
 				<tr>
-					<th class="active">Password</th>
+					<th class="active">パスワード</th>
 					<td>
 						<div class="form-group">
 							<input type="text" class="form-control" th:field="*{password}"/>
@@ -33,7 +33,7 @@
 				</tr>
 				
 				<tr>
-					<th class="active">User Name</th>
+					<th class="active">ユーザー名</th>
 					<td>
 						<div class="form-group">
 							<input type="text" class="form-control" th:field="*{userName}"/>
@@ -42,16 +42,16 @@
 				</tr>
 				
 				<tr>
-					<th class="active">DOB</th>
+					<th class="active">誕生日</th>
 					<td>
 						<div class="form-group">
-							<input type="text" class="form-control" th:field="*{birthday}"/>
+							<input type="text" class="form-control" placeholder="yyyy/MM/dd" th:field="*{birthday}"/>
 						</div>
 					</td>
 				</tr>
 				
 				<tr>
-					<th class="active">Age</th>
+					<th class="active">年齢</th>
 					<td>
 						<div class="form-group">
 							<input type="text" class="form-control" th:field="*{age}"/>
@@ -60,7 +60,7 @@
 				</tr>
 				
 				<tr>
-					<th class="active">Married</th>
+					<th class="active">結婚</th>
 					<td>
 						<div class="form-group">
 							<div th:each="item:${radioMarriage}">
@@ -77,7 +77,7 @@
 				</li>
 			</ul>
 			
-			<button class="btn btn-primary" type="submit">User Registration</button>
+			<button class="btn btn-primary" type="submit">ユーザー登録</button>
 		</form>
 	</div>
 </body>

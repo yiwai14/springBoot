@@ -11,11 +11,13 @@ public class WebConfig {
 	
 	@Bean
 	public MessageSource messageSource() {
-		
 		ReloadableResourceBundleMessageSource bean = new ReloadableResourceBundleMessageSource();
 		
-		bean.setBasename("classpath.messages");
+		//メッセージのプロパティファイル名を指定
+		//messages.propertiesファイルがセットされる
+		bean.setBasename("classpath:messages");
 		
+		//メッセージプロパティの文字コードを指定
 		bean.setDefaultEncoding("UTF-8");
 		
 		return bean;
@@ -25,7 +27,7 @@ public class WebConfig {
 	public LocalValidatorFactoryBean localValidatorFactoryBean() {
 		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
 		
-		localValidatorFactoryBean.setValidationMessageSource(messageSource());
+		localValidatorFactoryBean.setValidationMessageSource(messageSource());;
 		
 		return localValidatorFactoryBean;
 	}

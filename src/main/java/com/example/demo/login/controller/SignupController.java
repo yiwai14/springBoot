@@ -22,8 +22,8 @@ public class SignupController {
 		
 		Map<String, String> radio = new LinkedHashMap<>();
 		
-		radio.put("Married", "true");
-		radio.put("Single", "false");
+		radio.put("既婚", "true");
+		radio.put("未婚", "false");
 		
 		return radio;
 	}
